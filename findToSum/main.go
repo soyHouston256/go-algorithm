@@ -1,25 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"github.com/soyhouston256/algorithms/findToSum/myArray"
-)
+import "fmt"
 
 func main() {
 
-	arr := myArray.NewArray()
+	arr := "652notsuohyos si eman ym iH"
+	fmt.Println(reverse(arr))
+	fmt.Println(reverse2(arr))
+}
 
-	arr.Push("a")
-	arr.Push("e")
-	arr.Push("i")
-	arr.Push("o")
-	arr.Push("u")
-	arr.Push(1)
+func reverse(str string) string {
+	var reversed string
+	for i := len(str) - 1; i >= 0; i-- {
+		reversed += string(str[i])
+	}
+	return reversed
+}
 
-	val, _ := arr.Get(0)
-	fmt.Println(val)
-	fmt.Println(arr)
-	arr.Delete(2)
-	fmt.Println(arr)
-
+func reverse2(str string) string {
+	var reversed string
+	for _, char := range str {
+		reversed = string(char) + reversed
+	}
+	return reversed
 }
