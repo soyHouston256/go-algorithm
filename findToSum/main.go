@@ -14,11 +14,12 @@ func main() {
 	arr.Push("i")
 	arr.Push("o")
 	arr.Push("u")
+	arr.Push(1)
 
 	val, _ := arr.Get(0)
 	fmt.Println(val)
 	fmt.Println(arr)
-	arr.Delete(4)
+	arr.Delete(2)
 	fmt.Println(arr)
 
 }
