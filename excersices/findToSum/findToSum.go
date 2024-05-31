@@ -1,6 +1,6 @@
 package findToSum
 
-func FindToSum(nums []int, sum int) bool {
+func TwoSum(nums []int, sum int) bool {
 	dictComplement := make(map[int]bool)
 	for _, num := range nums {
 		complement := sum - num
